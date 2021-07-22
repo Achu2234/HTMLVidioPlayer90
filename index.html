@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="video_container" id="video_container">
+        <video id="source_player" preload="auto" poster="https://i.pinimg.com/originals/dc/d5/a4/dcd5a43843cf0972709290f2b4896396.jpg">
+            <source src="https://storage.cloud.google.com/tmp_dlp/%5BAnimesTC%5D%20Yahari%20Ore%20no%20Seishun%20Love%20Come%20wa%20Machigatteiru%20Kan%20-%2001%20%5B720p%5D.mkv?authuser=1&hl=pt-BR" />
+        </video>
+        <div class="dark_back" id="dark_back"></div>
+        <div class="controls" id="controls">
+            <div class="timeline" id="timeline">
+                <div id="timeline_line"></div>
+                <div id="middle_line"></div>
+                <div class="back_line" id="back_timeline"></div>
+            </div>
+            <div class="video_settings">
+                <div class="pause_and_play" id="duration">
+                    <i class="fa fa-play" onClick="player.toggle_play()" id="play_stop_icon"></i>
+                </div>
+                <div class="settings" id="settings">
+                    <div class="audio">
+                        <i class="fa fa-volume-up" id="volume_icon" onClick="player.show_audio_bar()" ></i>
+                        <div id="audio_range">
+                            <input id="audio_input" type='range' min="0" max="100"/>
+                        </div>
+                    </div>
+                    <i color="white" data-feather="maximize" id="fullscreen_icon" onClick="player.fullscreen()"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./src/js/index.js'></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
